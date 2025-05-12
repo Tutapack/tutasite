@@ -744,3 +744,59 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Style for the language selector */
+.language-selector {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.language-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--forest-green);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--forest-green);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-btn:hover {
+    background-color: var(--forest-green);
+    color: var(--white);
+}
+
+.language-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hide the default Google Translate widget */
+#google_translate_element {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .language-selector {
+        margin-right: 1rem;
+    }
+
+    .language-btn {
+        padding: 0.3rem 0.75rem;
+        font-size: 0.9rem;
+    }
+}
